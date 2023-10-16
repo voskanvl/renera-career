@@ -1,0 +1,91 @@
+.ntc
+    &__title
+        margin-bottom: pw(50)
+        color: #333
+        font-weight: 600
+        font-size: fzp(20,40)
+
+    &__goals-center
+        color: #333
+        font-size: fzp(15,30)
+        font-weight: 600
+        margin-bottom: pw(30)
+    &__goals-list
+        columns: 2
+        padding-left: 1rem
+        column-gap: pw(110)
+        margin-bottom: pw(100)
+
+        li
+            color: #000
+            font-size: fzp(12,20)
+            font-weight: 400
+            line-height: 130%
+
+            &::marker
+                color: var(--clr-blue)
+            & + li
+                margin-top: 15px
+
+        @media (width <= 768px)
+            columns: auto
+
+    &__body
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: pw(110)
+        row-gap: 2rem
+
+        @media (width <= 768px)
+            grid-template-columns: 100%
+
+    &__left
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+
+    &__specialties
+        position: relative
+        border-top: 1px solid var(--clr-blue)
+        padding-block: max(2rem,pw(54))
+        padding-left: 1rem
+        font-size: fzp(12,20)
+        font-weight: 400
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+
+        &::after
+            content: ""
+            position: absolute
+            top: -3px
+            left: 0
+            width: pw(200)
+            height: 5px
+            background: var(--clr-blue)
+
+        & > li::marker
+            color: var(--clr-blue)
+
+        @media (width <= 768px)
+            display: block
+            columns: 2
+
+            & > li + li
+                margin-top: 10px
+
+        @media (width <= 390px)
+            columns: auto
+
+    .addresses
+        @media (width <= 768px)
+            width: max-content
+            margin-inline: auto
+
+    .button-download
+        margin-top: pw(50)
+
+        @media (width <= 768px)
+            margin-inline: auto
