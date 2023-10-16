@@ -1,0 +1,57 @@
+.kaliningrad
+    padding: 67px min(282px, 282 / 1920 * 100vw)
+    background: url("images/kalinin-grad.jpg") no-repeat
+    background-size: cover
+    background-position: center
+    color: #fff
+
+    p
+        margin: 0
+        padding: 0
+
+    h2
+        text-transform: uppercase
+        margin-bottom: 14px
+        font-size: clamp(25px,50 / 1920 * 100vw,50px)
+
+    &__text
+        margin-bottom: 46px
+        font-size: clamp(12px, 24 / 1920 * 100vw, 24px)
+
+    &__union
+        display: flex
+        margin-bottom: 138px
+        padding-left: 50px
+
+    &__circle
+        flex: 0 1 407px
+        border-radius: 50%
+        border: 1px solid #fff
+        aspect-ratio: 1
+        display: grid
+        place-items: center
+        background: #0000
+        backdrop-filter: blur(6px)
+        margin-left: -50px
+
+        &:not(:last-child)
+            border-right: none
+
+        & > .t32
+            text-align: center
+
+    &__waits
+        display: flex
+        gap: min(79px, 79 / 1920 * 100vw)
+        flex-wrap: wrap
+        font-size: clamp(12px, 24 / 1920 * 100vw, 24px)
+
+    &__wait
+        padding-left: min(42px, 42 / 1920 * 100vw)
+        border-left: 1px solid #fff
+
+    .t32
+        font-size: clamp(16px, 32 / 1920 * 100vw, 32px)
+        font-weight: bold
+        p
+            font-size: inherit
