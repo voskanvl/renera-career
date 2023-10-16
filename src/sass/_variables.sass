@@ -8,4 +8,7 @@
 @function ph($x)
     @return calc($x / 1010 *100vh)
 
+@function fzp($x,$y)
+    @return clamp(#{$x}px, #{$y} / 1920 * 100vw, #{$y}px)
+
 $std-trans: .6s
