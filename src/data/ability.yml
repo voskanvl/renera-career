@@ -1,0 +1,33 @@
+ability:
+  - id: 1
+    title: МОДУЛИ И ЯЧЕЙКИ
+    body: ЛИТИЙ-ИОННЫЕ АККУМУЛЯТОРЫ РЭНЕРА (LI-ION)
+    href: https://renera.ru/litievye-nakopiteli/
+    images:
+      - images/ability/1.webp
+      - images/ability/1024/1.webp
+      - images/ability/425/1.webp
+  - id: 2
+    title: СТАЦИОНАРНЫЕ СИСТЕМЫ И ИБП
+    body: Системы накопления энергии для энергетики и предприятий
+    href: https://renera.ru/production/energy/
+    images:
+      - images/ability/2.webp
+      - images/ability/1024/2.webp
+      - images/ability/425/2.webp
+  - id: 3
+    title: ТЕХНОЛОГИИ
+    body: Передовые технологии, собственные R&D центры, разработки и ноу-хау
+    href: https://renera.ru/technology/
+    images:
+      - images/ability/3.webp
+      - images/ability/1024/3.webp
+      - images/ability/425/3.webp
+  - id: 4
+    title: ПРОИЗВОДСТВЕННЫЕ ПЛОЩАДКИ
+    body: первые в Росии гигафабрики, современные производственные линии
+    href: https://renera.ru/company/
+    images:
+      - images/ability/4.webp
+      - images/ability/1024/4.webp
+      - images/ability/425/4.webp

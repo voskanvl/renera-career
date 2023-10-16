@@ -1,0 +1,26 @@
+@import "./_menu"
+@import "./_list"
+
+.main-header
+    position: fixed
+    top: 0
+    z-index: 1
+    display: flex
+    align-items: center
+    cursor: url("/cursor/black.png") 19 19, default
+
+    & > .logo
+        background-image: url("/logo/logo.png")
+        // background-repeat: no-repeat
+        width: 320px
+        height: 80px
+    // &:hover
+    //     & > .logo
+    //         background-image: url("/logo/logo-white.png")
+    //     & > .menu > .menu__item
+    //         color: #fff
+
+.cristal
+    position: absolute
+    bottom: 0
+    right: 0

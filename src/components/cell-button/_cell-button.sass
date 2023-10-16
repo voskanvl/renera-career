@@ -1,0 +1,62 @@
+.cell-button1055
+    background: none
+    font-family: "Graphik LCG", sans-serif
+    border: none
+    padding-bottom: 20px
+    border-bottom: 4px solid #025EA100
+    margin-bottom: 4px
+    position: relative
+    cursor: pointer
+    user-select: none
+    -webkit-tap-highlight-color: transparent
+    appearance: none
+    -webkit-appearance: none
+    padding: 1rem 1rem 0
+    border-radius: 10px 10px 0 0
+    margin-top: 1px
+    transform-origin: bottom center
+    scale: 1 1
+    filter: saturate(0.2) contrast(0.5)
+    transition: transform 0.4s, filter 0.4s
+
+    &:is(:focus, :focus-visible)
+        outline: none
+
+    img
+        height: 140px
+        object-fit: contain
+
+        @media (width <= 1024px)
+            height: calc( 162 / 1024 * 100vw)
+
+    &__name
+        color: #333
+        font-size: clamp(11px,32 / 1920 * 100vw,32px)
+        font-weight: 400
+
+    &__generation, &__volume
+        font-size: clamp(13px,28 / 1920 * 100vw,28px)
+        font-weight: 300
+        text-transform: uppercase
+
+    &__generation
+        margin-bottom: 3px
+
+    &__volume
+        display: flex
+        column-gap: 0.5rem
+        justify-content: center
+        color: #333
+        text-align: center
+        font-size: clamp(10px,20 / 1920 * 100vw,20px)
+        font-weight: 700
+        margin-top: 5px
+
+        & > *
+            white-space: nowrap
+
+    &[active]
+
+        border-bottom: 4px solid #025EA1
+        scale: 1.2 1.2
+        filter: saturate(1)

@@ -1,0 +1,32 @@
+.variants
+    margin-top: calc(150 / 1920 * 100vw)
+    &__container
+        width: calc( 100% - calc(200 / 1920 * 100vw))
+        margin-inline: auto
+
+    &__title
+        color: #333
+        font-size: max(24px, min(2.6041666667vw, 50px))
+        font-weight: 500
+        margin-bottom: 50px
+        width: 40%
+
+    &__body
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        gap: calc(27 / 1920 * 100vw)
+
+    &__item
+        display: grid
+        place-items: center
+        background: #F5F5F5
+        container-type: inline-size
+        row-gap: 17px
+        padding: 1rem
+        text-decoration: none
+
+    &__caption
+        color: #025EA1
+        text-align: center
+        font-size: 5cqw
+        font-weight: 700

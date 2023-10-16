@@ -1,0 +1,133 @@
+.plan1612
+    --blue-color: #025EA1
+    --green-color: #259799
+    --time-atimation: 5s
+    margin-top: max(40px, 129 / 1920 * 100vw)
+    color: #3D3D3D
+    font-size: clamp(12px,24 / 1024 * 100vw,24px)
+    &__container
+        width: min(1758px, 100% - 4rem)
+        margin-left: auto
+        margin-right: auto
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        place-items: center
+        gap: 28px 40px
+
+    strong
+        color: #3D3D3D
+        text-align: center
+        font-size: clamp(18px,24 / 1024 * 100vw,40px)
+        font-weight: 300
+
+    &__year
+        color: var(--blue-color)
+        text-align: center
+        font-size: clamp(14px,28 / 1024 * 100vw,28px)
+        font-weight: 400
+        padding-top: 13px
+
+    &__text
+        max-width: 302px
+        text-align: center
+
+    &__progress
+        grid-column: 1 / -1
+        width: 100%
+        position: relative
+
+    &__track
+        --green: 0%
+        width: 100%
+        height: 4px
+        background: linear-gradient(to right,var(--green-color), var(--green), var(--blue-color))
+
+    &__thumb
+        width: clamp(18px,34 / 1024 * 100vw,34px)
+        aspect-ratio: 1
+        background-color: var(--blue-color)
+        border-radius: 50%
+        position: absolute
+        top: 0
+        translate: 0 calc(-50% + 2px)
+        transform-origin: center
+
+        &--1
+            left: 16%
+        &--2
+            left: 49%
+        &--3
+            left: 82%
+
+    &__button
+        margin-top: max(40px, 131 / 1920 * 100vw )
+        margin-inline: auto
+
+    &.anim
+        .plan1612__track
+            --green: 0%
+            background: linear-gradient(to right,var(--green-color), var(--green), var(--blue-color))
+            animation: move-green 5s linear 1 forwards
+        .plan1612__year
+            &:nth-last-of-type(1)
+                animation: scale-up 0.5s calc(var(--time-atimation) * 5 / 6) 1 forwards
+            &:nth-last-of-type(2)
+                animation: scale-up 0.5s calc(var(--time-atimation) / 2) 1 forwards
+            &:nth-last-of-type(3)
+                animation: scale-up 0.5s calc(var(--time-atimation) * 1 / 6) 1 forwards
+
+        .plan1612__text
+            &:nth-of-type(1)
+                animation: scale-up 0.5s calc(var(--time-atimation) * 1 / 6) 1 forwards
+            &:nth-of-type(2)
+                animation: scale-up 0.5s calc(var(--time-atimation) / 2) 1 forwards
+            &:nth-of-type(3)
+                animation: scale-up 0.5s calc(var(--time-atimation) * 5 / 6) 1 forwards
+        
+        .plan1612__thumb
+
+            &--1
+                animation: green-up 0.5s calc(var(--time-atimation) * 1 / 6) 1 forwards linear
+            &--2
+                animation: green-up 0.5s calc(var(--time-atimation) / 2) 1 forwards linear
+            &--3
+                animation: green-up 0.5s calc(var(--time-atimation) * 5 / 6) 1 forwards linear
+
+
+@keyframes move-green
+    0%
+        --green: 0%
+    5%
+        --green: 5%
+    10%
+        --green: 10%
+    20%
+        --green: 20%
+    30%
+        --green: 30%
+    40%
+        --green: 40%
+    50%
+        --green: 50%
+    60%
+        --green: 60%
+    70%
+        --green: 70%
+    80%
+        --green: 80%
+    90%
+        --green: 90%
+    100%
+        --green: 100%
+
+@keyframes scale-up
+    0%
+        scale: 1 1
+    100%
+        scale: 1.3 1.3
+
+@keyframes green-up
+    0%
+        background-color: var(--blue-color)
+    100%
+        background-color: var(--green-color)

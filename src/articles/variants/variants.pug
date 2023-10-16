@@ -1,0 +1,8 @@
+.variants 
+    .variants__container.container 
+        h2.variants__title ВАРИАНТЫ ИСПОЛНЕНИЯ
+        .variants__body 
+            each i in variants 
+                a.variants__item(href= i.href) 
+                    img.variants__img(src=i.img, alt=i.caption)
+                    .variants__caption= i.caption

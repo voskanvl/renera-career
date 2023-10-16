@@ -1,0 +1,11 @@
+.solutions1055
+    .solutions1055__container
+        h2.solutions1055__title 
+            p ОТРАСЛЕВЫЕ РЕШЕНИЯ 
+            p РЭНЕРА
+        ul.solutions1055__list 
+            each i in solutions
+                li 
+                    a(href=i.href)
+                        .solutions1055__caption= i.title
+                        img.solutions1055__img(src= i.img, alt="")

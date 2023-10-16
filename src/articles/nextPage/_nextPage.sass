@@ -1,0 +1,45 @@
+.next-page
+    display: grid
+    place-items: center
+    padding: 0 1em 82px
+
+    &__container
+        width: min(1750px,100%)
+        border-top: 1px solid #000
+        padding-top: 41px
+
+    &__list
+        margin-left: 1em
+        font-weight: 500
+        font-size: clamp(14px,24/1024*100vw,24px)
+        line-height: 24px
+
+    &__footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media (width<1024px)
+            flex-direction: column
+
+    &__contacts
+        font-family: 'TT Firs Neue'
+        font-style: normal
+        font-weight: 600
+        font-size: 50px
+        line-height: 112%
+        letter-spacing: 0.02em
+        color: #1E1E1E
+
+    &__go
+        border-radius: 50%
+        border: 1px solid #000
+        display: grid
+        place-items: center
+        aspect-ratio: 1
+        width: min(230px, 40%)
+        text-decoration: none
+        font-weight: 500
+        font-size: clamp(12px,22/1024*100vw,22px)
+        line-height: 109%
+        text-align: center
+        padding: 1em

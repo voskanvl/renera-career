@@ -1,0 +1,61 @@
+.step-closer2-1612
+    margin-top: max(40px, 130 / 1920 * 100vw)
+    &__container
+        width: min(1700px, 100% - 4rem)
+        margin-inline: auto
+        display: grid
+        grid-template-columns: repeat(2, minmax(0,1fr))
+        column-gap: clamp(5px,76 / 1920 * 100vw,76px)
+        place-items: center
+
+        & > div
+            position: relative
+
+            &:first-child
+                h3
+                    font-size: clamp(23px,60 / 1920 * 100vw,60px)
+                    color: #3D3D3D
+                    font-weight: 500
+                    text-transform: uppercase
+                    margin-top: 0
+
+                    & > p
+                        margin-block: 0
+                        margin-inline: 0
+                        padding: 0
+                        color: inherit
+                        font-size: inherit
+                        font-weight: 500
+                        line-height: inherit
+
+                        & + p
+                            translate: 14% 0
+            & > p
+                color: #000
+                font-size: clamp(12px,20 / 1024 * 100vw,20px)
+                line-height: 142.523%
+                margin-top: 30px
+
+                & + p
+                    margin-top: max(20px, 51 / 1920 * 100vw)
+
+        .affordable
+            position: absolute
+            bottom: -1rem
+            left: calc(-57 / 1920 * 100vw)
+            width: max(70px, 148 / 1920 * 100vw)
+            aspect-ratio: 1
+
+        img:not(.affordable)
+            display: block
+            width: 100%
+
+        @media (width <= 1024px)
+            grid-template-columns: 100%
+            row-gap: 40px
+
+            .green-button
+                margin-inline: auto
+
+    .green-button
+        margin-top: 50px

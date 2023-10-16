@@ -1,0 +1,22 @@
+mixin cell-data(cell, active)
+    .cell-data1055(data-id=cell.id, active= active) 
+        .cell-data1055__left
+            div.cell-data1055__panel 
+                ul 
+                    li 
+                        span Модель 
+                        span= cell.model
+                    each i in cell.params 
+                        li 
+                            - var riskyBusiness = `<h1 style='color; red;'>${"kjkj"}</h1>`
+                            span !{i.key}
+                            span= i.value
+
+            .cell-data1055__downloads
+                a.button-download.button-download--white(href="/files/leaflet.pdf" download="Буклет.pdf" target="_blank") Cкачать буклет
+                a.button-download.button-download--blue(href="/files/booklet.pdf" download="Листовка.pdf" target="_blank") Cкачать листовку
+
+        .cell-data1055__right 
+            img(src=cell.img)
+
+

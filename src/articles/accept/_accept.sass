@@ -1,0 +1,145 @@
+.accept
+    background-image: url("images/accept.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    color: #fff
+    // display: grid
+    // place-items: center
+    padding: 75px 1em 72px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__wrap
+        width: min(1552px, 100% - 2em)
+
+    &__container
+        width: min(1252px, 100%)
+        display: flex
+        flex-direction: column
+        align-items: stretch
+
+        & .splide
+            width: 100%
+
+    &__title
+        font-weight: 400
+        font-size: clamp(16px,28/1024*100vw,28px)
+        line-height: 160%
+        margin-bottom: 46px
+
+    &__list
+        // display: flex
+        // flex-direction: column
+        // row-gap: 25px
+        columns: 2
+
+    &__list-item
+        display: flex
+        align-items: flex-start
+        column-gap: 0.78125vw
+
+    &__list-id
+        font-weight: 400
+        font-size: clamp(12px,18/1024*100vw,18px)
+        line-height: 182%
+        color: rgba(255, 255, 255, 0.8)
+        opacity: 0.8
+
+    &__list-name
+        font-weight: 400
+        font-size: clamp(14px,24/1024*100vw,24px)
+        line-height: 151%
+
+    .accept__buttons
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        margin-top: 60px
+        @media (width < 600px)
+            flex-direction: column
+            row-gap: 20px
+            & > .accept__button
+                width: 100%
+                justify-content: center
+
+    &__button
+        font-weight: 600
+        font-size: clamp(14px,22/1024*100vw,22px)
+        line-height: 34px
+        text-transform: uppercase
+        color: #0A64A3
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        padding: clamp(13px,27/1024*100vw,27px) clamp(48px,72/1024*100vw,72px)
+        gap: 10px
+        background: #FFFFFF
+        border-radius: 50px
+        border: none
+        max-width: 425px
+        // margin: 0 auto
+        text-decoration: none
+
+        &--blue
+            background: #00b0f0
+            color: #fff
+
+    &__main-list
+        @media (width < 1024px)
+            display: none
+
+    &__slider
+        position: relative
+        display: none
+        width: 100%
+        margin: 0 auto
+        @media (width < 1024px)
+            display: block
+
+    &__slide-control
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 44px
+
+    &__controls
+        display: flex
+        align-items: center
+        column-gap: 37px
+
+    &__control
+        width: 10px
+        height: 15px
+        &--left
+            background-image: url("/svg/chevron-left.svg")
+            background-repeat: no-repeat
+        &--right
+            background-image: url("/svg/chevron-right.svg")
+            background-repeat: no-repeat
+
+    &__indicators
+        display: flex
+        align-items: center
+
+    &__indicator-lines
+        position: relative
+        margin-bottom: 12px
+
+    &__indicator-line
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 2px
+        &--back
+            background: #D9D9D9
+            opacity: 0.2
+            z-index: 1
+        &--front
+            background: #fff
+            width: 33%
+            z-index: 2
+            transition: width .5s

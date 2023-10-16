@@ -1,0 +1,62 @@
+.accordion
+    position: relative
+    border-bottom: 1px solid #000
+    padding: 50px 0
+    &__header
+        font-weight: 400
+        // font-size: 30px
+        font-size: clamp(18px,25/1920*100vw,25px)
+        // line-height: 30px
+        text-decoration-line: underline
+        color: #000000
+
+    @media (width < 1024px)
+        padding: calc(25px + 2em) 0
+
+    &__body
+        // height: 0
+        overflow: hidden
+        transition: .5s
+        margin: 0
+        max-height: 0px
+
+    &__switcher
+        position: absolute
+        inset: 0
+        // height: 30px
+        opacity: 0
+        cursor: pointer
+        &:checked + .accordion__container
+            & > .accordion__body
+                max-height: 400px
+                margin: 50px 0
+                // height: 300px
+                // height: auto
+            & .accordion__mark
+                background-image: url("/svg/minus.svg")
+                background-position: 0 50%
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: flex-end
+
+        & > a
+            color: #000
+            position: absolute
+            left: 0
+            z-index: 2
+            width: fit-content
+            @media (width<=768px)
+                width: 80%
+
+    &__mark
+        position: absolute
+        right: 0
+        z-index: 3
+        background-image: url("/svg/plus.svg")
+        background-repeat: no-repeat
+        width: clamp(20px,30/1024*100vw,30px)
+        aspect-ratio: 1
+        background-size: contain
+        flex-shrink: 0

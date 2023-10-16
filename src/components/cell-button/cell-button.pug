@@ -1,0 +1,9 @@
+mixin cell-button(cell,active)
+    button.cell-button1055(active= active, data-id= cell.id) 
+        img(src=cell.imgButton, alt="")
+        .cell-button1055__name= cell.type.name 
+        .cell-button1055__volume 
+            span= cell.type.generation
+            span /
+            span= cell.type.volume 
+            span= cell.type.unit

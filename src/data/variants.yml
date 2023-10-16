@@ -1,0 +1,10 @@
+variants:
+  - img: "images/variants/1.png"
+    caption: Шкафное исполнение
+    href: ""
+  - img: "images/variants/2.png"
+    caption: Контейнерное исполнение
+    href: ""
+  - img: "images/variants/3.png"
+    caption: Мобильное исполнение
+    href: ""

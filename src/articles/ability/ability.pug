@@ -1,0 +1,18 @@
+.ability1055
+    img.ability1055__img(src="images/ability/1.webp")
+    .ability1055__header 
+        h2 
+            p УЗНАЙТЕ БОЛЬШЕ О
+            p ВОЗМОЖНОСТЯХ РЭНЕРА
+    .ability1055__main
+    .ability1055__footer
+        ul.ability1055__list(style="display:flex;")
+            each i in ability
+                li(data-id=i.id, data-img=JSON.stringify(i.images)) 
+                    a.no-barba(href="#")
+                        strong= i.title 
+                        p= i.body
+                        div 
+                            span Подробнее 
+                            span 
+                                include ../../../assets/svg/arrow-right.svg

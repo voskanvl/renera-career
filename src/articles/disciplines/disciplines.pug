@@ -1,0 +1,48 @@
+include ../../components/accordion/accordion.pug
+.disciplines
+    .disciplines__container
+        h2.disciplines__title Выбирайте востребованные специальности в учебных заведениях-партнерах «РЭНЕРА»:
+        +accordion("Балтийский федеральный университет имени И. Канта, г. Калининград", null, true)
+            ul.disciplines__list 
+                li 
+                    p Химия
+                li  
+                    p Химическая экспертиза
+                    p.disciplines__programm
+                        a(href="https://kantiana.ru/enrollee/programs/himija/") К программе 
+                        img(src="/svg/arrow-right.svg")
+                li 
+                    p Химия, Технология аналитического контроля химических соединений
+                    p.disciplines__programm
+                        a(href="https://kantiana.ru/enrollee/programs/tehnologija-analiticheskogo-kontrolja-himicheskih-soedinenij/") К программе 
+                        img(src="/svg/arrow-right.svg")
+        +accordion("Технологический колледж, г.Советск","http://www.kotk39.ru/")
+            ul.disciplines__list 
+                li
+                    p Техническая эксплуатация и обслуживание электрического и электромеханического оборудования (по отраслям)
+                li
+                    p Монтаж, наладка и эксплуатация электрооборудования промышленных и гражданских зданий 
+
+        +accordion("Гусевский политехнический техникум, г. Гусев","https://guspoliteh.ru/")
+            ul.disciplines__list 
+                li 
+                    p Техническая эксплуатация и обслуживание электрического и электромеханического оборудования (по отраслям)
+                li 
+                    p Технология машиностроения
+                li 
+                    p Монтаж, техническое обслуживание и ремонт промышленного оборудования (по отраслям)
+
+        +accordion("Прибалтийский судостроительный техникум, г. Калининград","https://sudoteh.ru")
+            ul.disciplines__list 
+                li
+                    p Техническая эксплуатация и обслуживание электрического и электромеханического оборудования (по отраслям)
+                li
+                    p Технология машиностроения
+                li
+                    p Станочник (металлообработка)
+                li
+                    p Оператор станков с программным управлением
+
+        a.disciplines__button(href="/files/РЭНЕРА_ОБУЧЕНИЕ_НА_ВАКАНСИИ_НОВОГО_ЗАВОДА.pdf" download="РЭНЕРА_ОБУЧЕНИЕ_НА_ВАКАНСИИ_НОВОГО_ЗАВОДА.pdf") 
+            img(src="/svg/booklet.svg" )
+            span Скачать буклет

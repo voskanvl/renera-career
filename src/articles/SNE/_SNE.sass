@@ -1,0 +1,38 @@
+.sne
+    margin-top: calc(150 / 1920 * 100vw)
+    &__container
+        width: calc( 100% - calc(200 / 1920 * 100vw))
+        margin-inline: auto
+
+    &__title
+        color: #333
+        font-size: max(24px, min(2.6041666667vw, 50px))
+        font-weight: 500
+        margin-bottom: 50px
+        width: max-content
+
+    &__body
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        place-items: center
+        column-gap: calc(200 / 1920 * 100vw)
+
+    &__item
+        width: 100%
+        // display: grid
+        // place-items: center
+        // grid-template-rows: 785px auto
+        container: sne-item / inline-size
+        & img
+            width: 100%
+
+    &__caption
+        color: #7F7F7F
+        text-align: center
+        font-size: 4cqw
+        font-weight: 700
+        line-height: 110%
+
+    &__button
+        margin-top: calc(70 / 1920 * 100vw)
+        margin-inline: auto

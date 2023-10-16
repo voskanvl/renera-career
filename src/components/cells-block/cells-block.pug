@@ -1,0 +1,13 @@
+include ../../components/cell-button/cell-button.pug
+include ../../components/cell-data/cell-data.pug
+
+mixin cells-block(data,title)
+    .cells1055__container 
+        h2.cells1055__title= title
+        .cells1055__controls
+            div
+                each i in data
+                    +cell-button(i,i.id===1)
+        .cells1055__data
+            each i in data
+                +cell-data(i,i.id===1)

@@ -1,0 +1,52 @@
+include ../../pug/splides.pug
+
+.accept
+    .accept__wrap
+        h2.accept__title 
+            p КОМПАНИЯ ОТКРЫВАЕТ ПРИЕМ ЗАЯВОК ПО СЛЕДУЮЩИМ
+            p РЕГУЛЯРНО ВОСТРЕБОВАННЫМ ПРОФЕССИЯМ ДЛЯ 
+            p НОВОЙ ГИГАФАБРИКИ В ОКРУГЕ Г.НЕМАН:
+    .accept__container
+        ul.accept__list.accept__main-list
+            each i in accept 
+                li.accept__list-item 
+                    span.accept__list-id= i.id
+                    span.accept__list-name= i.name
+        .accept__slider
+            -
+                const a = accept.reduce(
+                    (acc, e, idx) => {
+                        const current = (idx / 5) | 0;
+                        if (acc[current]) {
+                            acc[current].push(e);
+                        } else {
+                            acc[current] = [];
+                            acc[current].push(e);
+                        }
+                        return acc;
+                    },
+                    [[]],
+                )
+            .accept__indicator-lines 
+                .accept__indicator-line.accept__indicator-line--back
+                .accept__indicator-line.accept__indicator-line--front
+
+            .accept__slide-control
+                .accept__indicators
+                    span.accept__indicator.accept__indicator--current
+                    span / 
+                    span.accept__indicator.accept__indicator--total
+                .accept__controls
+                    .accept__control.accept__control--left
+                    .accept__control.accept__control--right
+            +splide("accept", a, 5000)
+                each i in val
+                    .accept__list-item 
+                        .accept__list-id= i.id
+                        .accept__list-name= i.name
+
+        .accept__buttons
+            a.accept__button(href="#") Стать кандидатом
+            a.accept__button.accept__button--blue(href="/files/РЭНЕРА_ОБУЧЕНИЕ_НА_ВАКАНСИИ_НОВОГО_ЗАВОДА.pdf" download="РЭНЕРА_ОБУЧЕНИЕ_НА_ВАКАНСИИ_НОВОГО_ЗАВОДА.pdf") Все вакансии завода
+
+

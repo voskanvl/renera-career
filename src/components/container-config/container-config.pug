@@ -1,0 +1,8 @@
+.container-config 
+    img(src="images/container-config.png" alt="container config")
+    each i,idx in containerConfig
+        .container-config__zoom-icon(style=`left: ${i.x}%; top: ${i.y}%`)
+            include ../../../assets/svg/zoom.svg
+            label.container-config__label(for="zoom-img"+i.id) 
+            input(type="checkbox" id="zoom-img"+i.id hidden)
+            .container-config__popup= i.text

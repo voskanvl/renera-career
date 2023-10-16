@@ -1,0 +1,18 @@
+.menu
+    display: grid
+    grid-auto-flow: column
+    &:hover > .menu__item
+        color: #fff
+    & > .menu__item
+        padding: 0 10px
+        transition: color .2s
+        display: block
+        list-style: none
+        text-transform: uppercase
+
+        &:hover
+            cursor: url("/cursor/white.png") 19 19, default
+            & > span
+                color: #30A842
+            & > .list
+                display: grid

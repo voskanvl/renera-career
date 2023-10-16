@@ -1,0 +1,83 @@
+.news1055
+    padding-bottom: 120px
+    &__content
+        display: grid
+        grid-template-columns: repeat(2,50%)
+        margin-top: ph(48)
+        @media (width<=768px)
+            grid-template-columns: 100%
+
+    &__panel
+        padding: clamp(23px,40/1920*100vw,40px) clamp(26px,65/1920*100vw,65px) clamp(23px,60/1920*100vw,60px) clamp(28px,88/1920*100vw,88px)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+
+        &--white
+            background: #FDFDFD
+            box-shadow: 0px 0px 30px rgba(30, 30, 30, 0.1)
+        & > p + p
+            margin-top: 2em
+        & > p:first-child
+            font-style: normal
+            font-weight: 600
+            font-size: 26px
+            line-height: 34px
+            letter-spacing: 0.02em
+
+    &__title
+        font-style: normal
+        font-weight: 400
+        font-size: 30px
+        line-height: 121%
+        text-transform: uppercase
+        color: #1E1E1E
+        margin-bottom: ph(31)
+
+    &__breadcrumbs
+        margin-bottom: pw(63)
+
+    &__controls
+        margin-top: ph(70)
+        display: flex
+        justify-content: center
+        gap: 18px 1.25vw
+        // @media (width<=768px)
+        //     flex-direction: column
+        //     align-items: center
+
+    &__control
+        border-radius: 50%
+        border: none
+        // position: absolute
+        height: clamp(138px,230/1024*100vw,230px)
+        aspect-ratio: 1
+        background: #025EA1
+        color: #fff
+        font-weight: 500
+        font-size: clamp(14px,22/1024*100vw,22px)
+        line-height: 109%
+        display: flex
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        flex-wrap: wrap
+        & > p
+            width: 70%
+            text-align: center
+
+    &__button
+        text-decoration: none
+        border-radius: 30px
+        background: #00b0f0
+        padding: 1em 2em
+        width: 100%
+        display: grid
+        place-items: center
+        text-align: center
+        font-size: clamp(12px,16/1024*100vw,16px)
+        color: #000
+
+        &--white
+            color: #fff

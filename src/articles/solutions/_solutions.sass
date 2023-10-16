@@ -1,0 +1,72 @@
+.solutions1055
+    margin-bottom: max(40px, 100 / 1024 * 100vw)
+
+    &__container
+        // width: min(1759px, 100%)
+        margin-inline: clamp(1rem,100 / 1920 * 100vw,100px)
+        margin-top: 127px
+
+        @media (width<=768px)
+            margin-top: 40px
+
+    &__caption
+        width: 50%
+
+    &__title
+        color: #333
+        font-size: clamp(24px,50 / 1920 * 100vw,50px)
+        font-weight: 500
+        margin-bottom: 50px
+        width: 40%
+
+        @media (width<=1024px)
+            margin-bottom: 40px
+            width: calc(100% - 2rem)
+            margin-inline: auto
+
+    &__list
+        padding-inline: 1rem
+        display: flex
+        // flex-wrap: wrap
+        row-gap: 1rem
+        column-gap: clamp(5px,115 / 1920 * 100vw,115px)
+
+        list-style: none
+        margin: 0
+
+        & > *
+            flex: 1
+
+        @media (width <= 768px)
+            flex-direction: column
+            align-items: center
+
+            & > *
+                flex-basis: 300px
+                width: 300px
+
+        li
+            background: #FBFBFB
+            // height: 607px
+
+            // @media (width <= 768px)
+            //     height: 300px
+
+            & > a
+                // display: flex
+                // flex-direction: column
+                // height: 100%
+                display: grid
+                grid-template-rows: max-content 1fr
+                color: #025EA1
+                font-size: clamp(15px,30 / 1920 * 100vw,30px)
+                font-weight: 500
+                text-transform: uppercase
+                text-decoration: none
+                height: 100%
+
+                img
+                    place-self: bottom end
+                    object-fit: cover
+                    object-position: 0% 100%
+                    height: 100%

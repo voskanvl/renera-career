@@ -1,0 +1,17 @@
+.industries
+    .industries__container
+        h2.industries__title ОТРАСЛИ ПРИМЕНЕНИЯ <br/> &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; СИСТЕМ НАКОПЛЕНИЯ ЭНЕРГИИ
+        .industries__body 
+            .industries__triggers
+                ul.industries__list
+                    each i in industries
+                        li.industries__trigger(data-id= i.id)= i.trigger
+            .industries__ibp
+                h3.industries__caption  Источники бесперебойного питания (ИБП)
+                ul.industries__descriptions
+                img.industries__img(src="images/industries/ibp.png" alt="ИБП")
+
+            .industries__sne
+                h3.industries__caption  Системы накопления электроэнергии (СНЭ)
+                ul.industries__descriptions
+                img.industries__img(src="images/industries/sne.png" alt="СНЭ")

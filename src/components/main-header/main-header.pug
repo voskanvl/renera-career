@@ -1,0 +1,26 @@
+nav.main-header
+    .burger 
+    .logo 
+    ul.menu
+        each i in menu 
+            li.menu__item
+                ul.list
+                    each j in i.menu
+                        if j.menu 
+                            li.list__item.list__item--big 
+                                span!= j.name
+                                ul.list--details     
+                                    each k in j.menu 
+                                        li.list__item.list__item--small
+                                            a(href=k.href)= k.name
+                        else
+                            li.list__item.list__item--big
+                                a(href=j.href)= j.name
+                    img.cristal(src="/svg/cristal.svg")
+                span= i.title
+    .options 
+        .search 
+        .lk 
+        .international 
+
+

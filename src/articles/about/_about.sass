@@ -1,0 +1,37 @@
+.about1055
+    display: block
+
+    &__container
+        margin-top: min(130px, 130 / 1000 * 100vh)
+        margin-inline: clamp(1rem,100 / 1920 * 100vw,100px)
+
+        @media (width <= 768px)
+            margin-top: 80px
+
+    &__title
+        color: #333
+        font-size: clamp(20px,50 / 1920 * 100vw,50px)
+        font-weight: 600
+        margin-bottom: min(51px, 5vh)
+
+        p
+            width: fit-content
+
+        p:last-child
+            translate: 4.2ch 0
+
+    &__video
+        position: relative
+        cursor: pointer
+        svg
+            position: absolute
+            inset: 0
+            margin: auto
+            opacity: 1
+            transition: opacity 0.6s
+            cursor: pointer
+            pointer-events: none
+            width: clamp(40px, 107 / 1920 * 100vw, 107px)
+
+            &.hidden
+                opacity: 0

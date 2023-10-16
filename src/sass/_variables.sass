@@ -1,0 +1,11 @@
+=wid($x:1320px,$percent:95%)
+    width: min($x,$percent)
+    margin: 0 auto
+
+@function pw($x)
+    @return calc($x / 1920 *100vw)
+
+@function ph($x)
+    @return calc($x / 1010 *100vh)
+
+$std-trans: .6s

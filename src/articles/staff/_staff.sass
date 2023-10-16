@@ -1,0 +1,54 @@
+.staff
+    background-image: url("images/staff.png")
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 61px 1em 64px
+    margin-bottom: -1px
+
+    &__wrap
+        // max-width: 1450px
+        width: min(100vw, 1450px)
+
+    &__container
+        color: #fff
+        max-width: 1109px
+
+    &__title
+        font-family: 'TT Firs Neue'
+        font-style: normal
+        font-weight: 600
+        font-size: clamp(22px,50/1024*100vw,50px)
+        line-height: 109%
+        margin-bottom: 16px
+
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: clamp(14px,24/1024*100vw,24px)
+        line-height: 109%
+
+    &__controls
+        margin-top: 60px
+        display: flex
+        align-items: center
+        column-gap: 61px
+        @media (width <= 768px)
+            flex-direction: column
+            align-items: stretch
+            row-gap: 20px
+
+    &__button
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: clamp(13px,20/1024*100vw,20px) clamp(42px,48/1024*100vw,48px)
+        gap: 10px
+        background: #fff
+        color: #0A64A3
+        font-weight: 600
+        font-size: clamp(15px,26/1024*100vw,26px)
+        line-height: 22px
+        border-radius: 15px

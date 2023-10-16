@@ -1,0 +1,65 @@
+.form-component1056
+    --fz40: clamp(20px,50 / 1920 * 100vw,50px)
+    --fz28: clamp(16px,28 / 1920 * 100vw,28px)
+    display: grid
+    padding-block: 70px
+    place-items: center
+    color: #fff
+    background: #025EA1 url("images/form-back.jpg") no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+
+    &__container
+        width: min(1547px, 100% - 4rem)
+    &__title
+        font-size: var(--fz40)
+        font-weight: 500
+        margin-bottom: 56px
+        padding-bottom: 16px
+        // border-bottom: 5px solid #57CCA3
+        width: fit-content
+        margin-inline: auto
+        position: relative
+
+        &::after
+            content: ""
+            position: absolute
+            height: 4px
+            background: #fff
+            width: 80%
+            bottom: 0
+            left: 50%
+            translate: -50% 0
+
+    &__buttons
+        margin-inline: auto
+        width: max-content
+        display: grid
+        grid-template-columns: repeat(3, max-content)
+        gap: 20px
+
+        @media (width <= 768px)
+            grid-template-columns: 100%
+            place-items: center
+            grid-auto-rows: clamp(32px,42 / 1024 * 100vw,42px)
+
+        & > a
+            color: #fff
+            text-decoration: none
+            text-align: center
+            font-size: clamp(12px,20 / 1024 * 100vw,20px)
+            font-weight: 600
+            width: max-content
+            height: min(50px, 50 / 1000 * 100vh)
+
+            &:not(.green-button)
+                border-radius: 100px
+                width: 200px
+                border: 1px solid #fff
+                display: grid
+                place-items: center
+
+        #submit_your_application
+            background: #fff
+            color: #025EA1

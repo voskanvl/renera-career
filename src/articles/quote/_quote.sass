@@ -1,0 +1,79 @@
+.quote1612
+    --quote-width: 5vw
+    margin-top: max(40px,102 / 1920 * 100vw)
+
+    &__container
+        margin-inline: clamp(1rem,100 / 1920 * 100vw,100px)
+        display: grid
+        grid-template-columns: 267px 1fr
+        column-gap: max(5px, 220 / 1920 * 100vw)
+        row-gap: 50px
+        @media (width <= 1024px)
+            grid-template-columns: 100%
+
+        q::before, q::after
+            content: ""
+
+    &__person
+        display: flex
+        flex-direction: column
+        gap: 30px
+
+        @media (width <= 1024px)
+            flex-direction: row
+            align-items: center
+
+        @media (width <= 1024px)
+            flex-direction: column
+
+        & > img 
+            border-radius: 50% 
+            width: min(220px, 100%)
+            aspect-ratio: 1
+            object-fit: cover
+            object-position: 50% 0%
+
+    &__role
+        font-size: clamp(12px,20 / 1024 * 100vw,20px)
+        font-weight: 500
+
+    &__quote
+        display: flex
+        height: 76%
+        column-gap: calc(50 / 1920 * 100vw)
+
+        & > *:nth-child(1)
+            align-self: flex-start
+            flex: 0 0 var(--quote-width)
+            translate: 0 0%
+
+            @media (width <= 1024px)
+                translate: 0 -50%
+            @media (width <= 768px)
+                translate: 0 -70%
+
+        & > *:nth-child(2)
+            align-self: center
+        & > *:nth-child(3)
+            align-self: flex-end
+            flex: 0 0 var(--quote-width)
+            translate: 0 0%
+
+            @media (width <= 1024px)
+                translate: 0 50%
+            @media (width <= 768px)
+                translate: 0 70%
+
+        q
+            display: flex
+            flex-direction: column
+            row-gap: 30px
+
+            font-size: clamp(12px,20 / 1024 * 100vw,20px)
+            font-weight: 400
+            line-height: 130%
+
+       
+
+        @media (width <= 1024px)
+            --quote-width: 10vw

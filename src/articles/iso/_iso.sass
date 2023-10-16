@@ -1,0 +1,31 @@
+.iso1612
+    margin-top: max(40px, 272 / 1920 * 100vw)
+    &__container
+        width: min(1920px - 162px, 100% - 4rem)
+        margin-inline: auto
+
+    &__title
+        color: #3D3D3D
+        font-size: clamp(30px,50 / 1920 * 100vw,50px)
+        font-weight: 500
+        text-transform: uppercase
+
+    &__body
+        display: grid
+        place-items: center
+        grid-template-columns: repeat(auto-fit, minmax(390px,1fr))
+        margin-top: min(40px, 80 / 1920 * 100vw)
+        gap: 2fr 5px
+
+        p
+            color: #000
+            font-size: clamp(14px,20 / 1024 * 100vw,20px)
+
+            & + p
+                margin-top: 1rem
+
+    &__button
+        margin-top: min(40px, 78 / 1920 * 100vw)
+
+        @media (width <= 768px)
+            margin-inline: auto

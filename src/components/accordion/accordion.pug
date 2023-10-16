@@ -1,0 +1,9 @@
+mixin accordion(title, href="#", checked)
+    .accordion
+        input.accordion__switcher(type="checkbox" checked= checked)
+        .accordion__container
+            header.accordion__header
+                a(href= href)= title 
+                span.accordion__mark
+            main.accordion__body 
+                block
