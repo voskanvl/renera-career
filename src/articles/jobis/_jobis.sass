@@ -1,0 +1,48 @@
+.jobis
+    background: url("images/digital-blue-hud-interface-laptop-concept 1.jpg") no-repeat
+    background-size: cover
+    background-position: center
+    // padding-block: ph(136)
+    // padding-left: pw(263)
+    color: #fff
+    display: grid
+    place-items: center
+    min-height: calc(100dvh - 72px)
+
+    @media (width < 1024px)
+        padding: 1em
+
+    h2
+        font-weight: 900
+        font-size: clamp(20px,40 / 1920 * 100vw,40px)
+        place-self: center
+
+    &__container
+        display: grid
+        grid-template-columns: 1fr 2fr
+        place-items: start center
+
+        @media (width < 1024px)
+            grid-template-columns: 100%
+            row-gap: ph(70)
+
+    &__list
+        width: 50%
+        list-style: none
+        margin: 0
+        padding: 0
+        display: flex
+        flex-direction: column
+        font-size: clamp(12px,24 / 1920 * 100vw,24px)
+        font-weight: 500
+
+        @media (width < 1024px)
+            width: 100%
+
+        li
+            width: 100%
+            padding: 38px 0
+            border-top: 1px solid #fff
+
+            &:last-child
+                border-bottom: 1px solid #fff

@@ -9,6 +9,7 @@ const phoneMask = (phone: string) => {
 }
 
 function messageToForm(form: HTMLFormElement, message: string): void {
+    const TIME_TO_REMOVE = 4000
     const modal = document.createElement("div")
     modal.style.cssText = `
         position: absolute;
@@ -18,17 +19,17 @@ function messageToForm(form: HTMLFormElement, message: string): void {
         height: 100%;  
         display: grid;
         place-items: center;
-        background: #0009;
+        background: #0005;
         backdrop-filter: blur(4px);    
     `
     modal.innerHTML = `<h1 style="text-transofrm: uppercase; text-align: center; padding: 1rem;">${message}</h1>`
     form.append(modal)
     setInterval(() => {
         modal.remove()
-    }, 4000)
+    }, TIME_TO_REMOVE)
 }
 export default function form() {
-    const formElement = document.querySelector<HTMLFormElement>("form.form-component1055__body")
+    const formElement = document.querySelector<HTMLFormElement>("form.part-of-team__form")
     const phone = document.querySelector<HTMLInputElement>("#phone")
 
     phone &&

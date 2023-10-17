@@ -1,0 +1,16 @@
+.part-of-team.container1338 
+    h2.part-of-team__title стать частью команды рэнера 
+    form.part-of-team__form(action="/mail.php")
+        input(type="text" name="name" placeholder="Как к Вам обращаться" required) 
+        input(type="text" name="role" placeholder="Должность, которую вы рассматриваете сейчас или занимаете") 
+        input(type="email" name="email" placeholder="Email" required) 
+        label(for="resume") 
+            input#resume(type="file" name="resume" hidden)
+            img(src="images/icons/fi-rr-clip.svg")
+            span Прикрепить резюме, doc., ppt, весом не более 1 Мб
+        input(type="text" name="city" placeholder="Город проживания" ) 
+        input#phone(type="tel" name="phone" placeholder="Как с Вами связаться?" required) 
+        .part-of-team__disclaimer 
+            input#agree-disclaimer(type="checkbox" name="agree" required)
+            label(for="agree-disclaimer")  Даю согласие на обработку моих персональных данный в соответствии с политикой обработки персональных данных
+        input.button-download.button-download--white(type="submit" value="отправить")

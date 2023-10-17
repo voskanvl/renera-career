@@ -1,0 +1,47 @@
+.build-a-career
+    &__title
+        color: #333
+        font-size: fzp(20,40)
+        font-weight: 600
+        margin-bottom: pw(54)
+        text-transform: uppercase
+
+    &__body
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        grid-template-rows: repeat(2,1fr)
+        gap: 1rem
+        @media (width <= 1024px)
+            grid-template-columns: 100%
+            grid-template-rows: repeat(3,auto)
+
+    &__caption
+        grid-column: 1 / -1
+        color: #000
+        font-size: fzp(12,20)
+        font-weight: 400
+        line-height: 130%
+        margin-bottom: pw(30)
+
+    &__form
+        border-left: 2px solid #333
+        padding-left: 25px
+        display: flex
+        align-items: center
+        column-gap: pw(50)
+
+        .button-download
+            flex: 0 0 min(230px,50%)
+
+        @media (width <= 490px)
+            flex-direction: column
+            row-gap: 1rem
+            border-top: 2px solid #333
+            border-left: none
+            padding-left: 0
+            padding-top: 25px
+
+    &__form-title
+        color: #333
+        font-size: fzp(15,25)
+        font-weight: 600
